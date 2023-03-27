@@ -24,12 +24,13 @@ class Counter extends React.Component {
     
     render() {
         return (
-            <div>
-                <h3 >{this.state.value}</h3>
-                <button onClick={this.handleIncreaseValue}>Increase</button>
-                <button onClick={this.handleDecreaseValue}>Decrease</button>
+            <div className='flex flex-col justify-center items-center bg-gradient-to-b from-cyan-500 to-blue-500 h-screen'>
+                <div className='bg-slate-50 p-p border-solid border-2 border-black rounded-lg'>
+                    <p className='text-lg text-center'>{this.state.value}</p>
+                    <button className='my-3 w-full bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded' onClick={this.handleIncreaseValue}>Increase</button>
+                    <button className='my-3 w-full bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded' onClick={this.handleDecreaseValue}>Decrease</button>
+                </div>
             </div>
-            
         )
     }
 }
